@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@700&display=swap');
+
+/*header*/
+header{
+    position: absolute;
+    inset: 0 auto auto 0;
+    z-index: 100;
+    width: 100%;
+}
+
+header .container{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 a{
+    color: white;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+/*menu*/
+.menu{
+    display: flex;
+}
+
+.menu li a{
+    display: block;
+    padding-inline: 12px;
+    color: white;
+    font-size: 16px;
+}
+
+/*hero*/
+.hero {
+    position: relative;
+}
+
+.hero h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Kaisei Opti', serif;
+    font-size: 40px;
+}
+
+.hero img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 80%,
+        0 100%
+    );
+}
+
+/*about*/
+.content{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+}
+
+.content h3{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.content p{
+    font-size: 14px;
+    line-height: 2.1;
+    text-align: justify;
+}
+
+/*photo*/
+.photo {
+    background-color: #ccc;
+}
+
+.photo .container:nth-child(2){
+    padding: 0;
+}
+
+.photo .container:nth-child(4){
+    padding: 0;
+}
+
+
+.photo ul li{
+    position : relative;
+    margin-block: 50px;
+    margin-inline: 10px;
+    background-color: white;
+    padding: 15px;
+    padding-bottom: 40px;
+    overflow: visible;
+}
+
+.photo li h3{
+    font-size: 15px;
+}
+
+.photo-item1{
+    transform: rotate(-10deg);
+}
+
+.photo-item2{
+    transform: rotate(5deg);
+}
+
+.photo-item3{
+    transform: rotate(-3deg);
+}
+
+.tape{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width:150px;
+    height:25px;
+    background-color: rgba(255,255,255,0.2);
+    border-left: 2px dotted rgba(0,0,0,.1);
+    border-right: 2px dotted rgba(0,0,0,.1);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.photo-item1 .tape{
+    transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.photo-item2 .tape{
+    transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.photo-item3 .tape{
+    transform: rotate(15deg);
+}
+
+.photo-item4 .tape{
+    transform: translate(-50%, -50%);
+}
+
+/*contact*/
+.contact div{
+    margin-bottom: 20px;
+}
+
+.contact p{
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.contact label{
+    margin-bottom: 2px;
+}
+
+.name::after, .e-mail::after, .phone-number::after ,.query::after{
+    content: "*";
+    color: red;
+}
+
+.contact input{
+    height: 30px;
+    font-size: 16px;
+    padding-block: 3px;
+}
+
+.contact textarea{
+    font-size: 16px;
+}
+
+.contact input::placeholder{
+    opacity: 0.4;
+}
+
+.contact textarea::placeholder{
+    opacity: 0.4;
+}
+
+.contact .btn-contact a{
+    display: inline-block;
+    padding-block: 10px;
+    padding-inline: 50px;
+    border: 1px solid black;
+    transition: all ease 0.3s;
+}
+
+.contact .btn-contact a:hover{
+    background-color: #fff;
+}
+
+/*footer*/
+footer{
+    padding-block: 50px;
+    padding-inline: 40px;
+    background-color: #bbb;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer li{
+    display: block;
+    padding-inline: 10px;
+}
+
+.site-footer{
+    text-align: right;
+}
+
+.site-footer h1 a{
+    margin-bottom: 10px;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+.site-footer{
+    font-size: 13px;
+}
+
+.copyright{
+    color: #eee;
+    font-size: x-small;
+}
+
+@media(max-width: 599px){
+    /*header*/
+    header h1 a{
+        font-size: 25px;
+    }
+
+    .hamburger{
+        position: fixed;
+        inset: 35px 20px auto auto;
+        width: 30px;
+        height: 20px;
+    }
+
+    .hamburger span{
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: all ease 0.3s;
+    }
+
+    .hamburger span:nth-of-type(1){
+        top: 0;
+    }
+
+    .hamburger span:nth-of-type(2){
+        top: 50%;
+    }
+
+    .hamburger span:nth-of-type(3){
+        top: 100%;
+    }
+
+    .hamburger.active span:nth-of-type(1){
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .hamburger.active span:nth-of-type(2){
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-of-type(3){
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+
+    .menu{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        inset: 0 auto auto 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: translateX(-100%);
+        transition: all ease 0.3s;
+        padding-top: 70px;
+    }
+
+    .menu li{
+        padding-block: 15px;
+    }
+
+    .menu.active{
+        transform: translateX(0);
+    }
+
+    .hamburger.active span{
+        background-color: #ffffff;
+    }
+
+    .menu li a{
+        color: #ffffff;
+    }
+
+    .menu li a::after{ 
+        background-color: #ffffff;
+    }
+
+    /*hero*/
+    .hero h2{
+       font-size: 30px;
+    }
+
+    /*about*/
+    .content{
+        grid-template-columns: 1fr;
+    }
+
+    .content h3{
+        font-size: 32px;
+    }
+
+    .content p{
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /*photo*/
+    .photo p{
+        font-size: 13px;
+    }
+
+    .photo ul li{
+        opacity: 0.6;
+    }
+
+    .photo li h3{
+        font-size: 12px;
+    }
+
+    .photo ul .slick-center{
+        opacity: 1; 
+    }
+
+    .tape{
+        width:100px;
+        height:25px;
+    }
+
+    /*contact*/
+    .contact p{
+        font-size: 13px;
+    }
+
+    .contact input::placeholder{
+        font-size: 13px
+    }
+
+    .contact label{
+        font-size: 13px;
+    }
+
+    .contact .btn-contact a{
+        padding-block: 8px;
+        padding-inline: 37px;
+        font-size: 13px;
+    }
+
+    /*footer*/
+    footer{
+        display: block;
+    }
+
+    footer ul{
+        margin-bottom: 20px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 767px){
+    /*about*/
+    .content{
+        grid-template-columns: 1fr;
+    }
+
+    .img-content{
+        text-align: center;
+    }
+
+}
+
