@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/defalut.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/scroll-arrow.css">
+    <link rel="stylesheet" href="assets/css/inview.css">
+    <!--Vue cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+
+    <!--slick cdn-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!--fontawosome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--header-->
+    <header id="app">
+        <div class="container">
+            <h1><a href="/index.html">slash gallary</a></h1>
+            <nav>
+                <ul class="menu" v-bind:class="{active: isActive}">
+                    <li v-on:click="isActive=!isActive"><a href="#about">about</a></li>
+                    <li v-on:click="isActive=!isActive"><a href="#photo">photo</a></li>
+                    <li v-on:click="isActive=!isActive"><a href="#contact">contact</a></li>
+                    <li v-on:click="isActive=!isActive"><a href="/index.html" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                </ul>
+                <div class="hamburger" v-on:click="isActive=!isActive" v-bind:class="{active: isActive}">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--main-->
+    <main>
+
+        <!--hero-->
+        <div class="hero">
+            <div class="img-hero">
+                <img src="assets/img/brossom.jpeg" alt="">
+            </div>
+            <h2 class="typist"></h2>
+            <div class="scrolldown"><span>Scroll</span></div>
+        </div>
+
+        <!--about-->
+        <section class="about js-fadeUp" id="about">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="content">
+                    <div>
+                        <h3>Yoruzora</h3>
+                        <p>
+                            大学4年で、物理とwebエンジニアやってます。このサイトはフォトサイトのデモとして、jQuery+Vue.jsで開発しました。
+                            このサイトは静的なものですが、普段はNuxt.jsやNext.jsを使って動的なサイトを作っています。
+                            最近、atcoderのためにpythonを学んだので、バックエンドをflaskやDjangoで書けたらと思う今日この頃です。
+                            (ヒーロー要素の画像以外は、デモのため、フリー素材を使用しました。)
+                        </p>
+                    </div>
+                    <div class="img-content">
+                        <img src="assets/img/about.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--photo-->
+        <section class="photo js-fadeUp" id="photo">
+            <div class="container">
+                <h2 class="section-title">Photo</h2>
+                <p>日常の何気ない一枚を切り取りました。</p>
+            </div>
+            <div class="container">
+                <ul class="slider_1">
+                    <li class="photo-item1">
+                        <img src="assets/img/brossom.jpeg" alt="">
+                        <h3>チャペルと桜</h3>
+                        <div class="tape"></div>
+                    </li>
+                    <li class="photo-item2">
+                        <img src="assets/img/img6.jpg" alt="">
+                        <h3>紅茶</h3>
+                        <div class="tape"></div>
+                    </li>
+                    <li class="photo-item3">
+                        <img src="assets/img/img5.jpg" alt="">
+                        <h3>もくもく雲</h3>
+                        <div class="tape"></div>
+                    </li>
+                    <li class="photo-item4">
+                        <img src="assets/img/img4.jpg" alt="">
+                        <h3>傘からの一枚</h3>
+                        <div class="tape"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <p>フリー素材の世界の絶景を集めてみました。</p>
+            </div>
+
+            <div class="container">
+                <ul class="slider_2" dir="rtl">
+                    <li class="photo-item1">
+                        <img src="assets/img/img1.jpg" alt="">
+                        <h3>大都会</h3>
+                        <div class="tape"></div>
+                    </li>
+                    <li class="photo-item2">
+                        <img src="assets/img/img2.jpg" alt="">
+                        <h3>サイバー都市</h3>
+                        <div class="tape"></div>
+                    </li>
+                    <li class="photo-item3">
+                        <img src="assets/img/img3.jpg" alt="">
+                        <h3>イエローストーン国立公園</h3>
+                        <div class="tape"></div>
+                    </li>
+                    <li class="photo-item4">
+                        <img src="assets/img/img7.jpg" alt="">
+                        <h3 >ウユニ塩湖</h3>
+                        <div class="tape"></div>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="contact js-fadeUp" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p>写真の依頼・ご相談などお気軽にお問い合わせください。</p>
+                <form action="">
+                    <div>
+                        <label for="" class="name">お名前</label>
+                        <input type="text" placeholder="田中太郎">
+                    </div>
+                    <div>
+                        <label for="" class="group">団体名</label>
+                        <input type="text" placeholder="splash gallary">
+                    </div>
+                    <div>
+                        <label for="" class="e-mail">メールアドレス</label>
+                        <input type="text" placeholder="splashgallary2023@gmail.com">
+                    </div>
+                    <div>
+                        <label for="" class="phone-number">電話番号</label>
+                        <input type="text" placeholder="03-xxxxx-xxxxx">
+                    </div>
+                    <div>
+                        <label for="" class="query">お問い合わせ内容</label>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="絶景写真を雑誌で使うので、３枚お願いしたいです"></textarea>
+                    </div>
+                    <div class="btn-contact"><a href="">送信</a></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#photo">photo</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+        <div class="site-footer">
+            <h1><a href="">slash gallary</a></h1>
+            <div class="copyright">copyright&copy;splash gallary 2023 Allright Reserved</div>
+        </div>
+    </footer>
+</body>
+<!--jquery inview.js-->
+<script src="assets/js/jquery.inview.min.js"></script>
+<!--Jquery typist.js-->
+<script src="assets/js/jquery.typist.js"></script>
+<script src="assets/js/app.js"></script>
+
+</html>
